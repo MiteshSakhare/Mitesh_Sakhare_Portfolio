@@ -8,10 +8,24 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     }
   }
 
+  // Function to scroll to top without page reload
+  const scrollToTop = (e) => {
+    e.preventDefault() // Prevent default link behavior
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <BootstrapNavbar expand="lg" fixed="top" className="custom-navbar">
       <Container>
-        <BootstrapNavbar.Brand href="#home" className="brand">
+        <BootstrapNavbar.Brand 
+          href="#" 
+          onClick={scrollToTop}
+          className="brand"
+          style={{ cursor: 'pointer' }}
+        >
           Mitesh Sakhare
         </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
