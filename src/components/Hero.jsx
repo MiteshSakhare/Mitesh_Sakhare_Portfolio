@@ -47,79 +47,103 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="hero-section">
+    <section id="hero" className="hero-section">
       <Container>
         <Row className="align-items-center min-vh-100">
           {/* Left Content */}
-          <Col lg={6}>
+          <Col lg={6} className="order-2 order-lg-1">
             <div className="hero-content">
-              <h4 className="greeting">Hello, I'm</h4>
-              <h1 className="hero-name">Mitesh Sakhare</h1>
-              <h2 className="hero-title">
+              <p className="greeting">Hello, I'm</p>
+              <h1 className="hero-name display-3 fw-bold mb-3">
+                Mitesh Sakhare
+              </h1>
+              <h2 className="hero-title mb-4">
                 Creative <span className="typed-text">{displayText}</span>
                 <span className="cursor">|</span>
               </h2>
-              <p className="hero-description">
-                Passionate about creating innovative solutions using cutting-edge technologies. 
+              <p className="hero-description lead mb-4">
+                Passionate about creating innovative solutions using cutting-edge technologies.
                 Earned my B.E. in Computer Engineering with a strong foundation in AI/ML and Full-Stack Development.
               </p>
-              <div className="hero-buttons">
-                <Button 
-                  variant="primary" 
-                  className="me-3"
+
+              {/* Action Buttons */}
+              <div className="hero-buttons mb-4">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="me-3 mb-2"
                   onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
                 >
                   View Projects
                 </Button>
-                <Button 
+                <Button
                   variant="outline-primary"
-                  href="https://github.com/MiteshSakhare"
-                  target="_blank"
-                >
-                  <FaGithub className="me-2" /> GitHub
-                </Button>
-                <Button 
-                  variant="outline-primary"
+                  size="lg"
+                  className="mb-2"
                   onClick={downloadResume}
                 >
                   <FaDownload className="me-2" />
                   Resume
                 </Button>
               </div>
-              <div className="social-icons mt-4">
-                <a href="https://www.linkedin.com/in/miteshsakhare/" target="_blank" rel="noopener noreferrer">
-                  <FaLinkedin />
-                </a>
-                <a href="https://github.com/MiteshSakhare" target="_blank" rel="noopener noreferrer">
+
+              {/* Social Icons - Mobile Optimized */}
+              <div className="social-icons d-flex flex-wrap justify-content-center justify-lg-start gap-3">
+                <a 
+                  href="https://github.com/MiteshSakhare" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label="GitHub Profile"
+                  title="GitHub"
+                >
                   <FaGithub />
                 </a>
-                <a href="mailto:miteshsaksahre301@gmail.com">
+                <a 
+                  href="https://linkedin.com/in/miteshsakhare" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label="LinkedIn Profile"
+                  title="LinkedIn"
+                >
+                  <FaLinkedin />
+                </a>
+                <a 
+                  href="mailto:miteshsakhare301@gmail.com"
+                  className="social-link"
+                  aria-label="Email Contact"
+                  title="Email"
+                >
                   <FaEnvelope />
                 </a>
               </div>
             </div>
           </Col>
 
-          {/* Right Content */}
-          <Col lg={6}>
-            <div className="hero-image text-center">
-              <div className="hero-visual">
-                <div className="floating-shapes">
-                  <div className="shape shape-1"></div>
-                  <div className="shape shape-2"></div>
-                  <div className="shape shape-3"></div>
-                  <div className="shape shape-4"></div>
+          {/* Right Content - Hero Visual */}
+          <Col lg={6} className="order-1 order-lg-2 mb-4 mb-lg-0">
+            <div className="hero-visual">
+              <div className="main-icon">
+                <div className="icon-background">
+                  <div className="icon-content">MS</div>
                 </div>
-                <div className="main-icon">
-                  <div className="icon-background">
-                    <div className="icon-content">MS</div>
-                  </div>
-                </div>
+              </div>
+              
+              {/* Floating Shapes */}
+              <div className="floating-shapes">
+                <div className="shape shape-1"></div>
+                <div className="shape shape-2"></div>
+                <div className="shape shape-3"></div>
+                <div className="shape shape-4"></div>
               </div>
             </div>
           </Col>
         </Row>
       </Container>
+
+      {/* Particles Background */}
+      <div className="particles-container" id="particles"></div>
     </section>
   )
 }

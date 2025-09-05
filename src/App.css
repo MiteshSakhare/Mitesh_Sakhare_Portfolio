@@ -1180,3 +1180,375 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent-color);
 }
 
+/* Enhanced Mobile Responsiveness */
+
+/* Contact Section Mobile Fixes */
+@media (max-width: 768px) {
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .contact-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .contact-text h5 {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-text p {
+    font-size: 0.85rem;
+    word-break: break-word;
+    line-height: 1.3;
+  }
+
+  .contact-text a {
+    word-break: break-all;
+    display: inline-block;
+    max-width: 100%;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+  .contact-section {
+    padding: 3rem 0;
+  }
+
+  .contact-card {
+    padding: 0.5rem;
+  }
+
+  .contact-item {
+    margin-bottom: 1rem;
+    padding: 0.25rem 0;
+  }
+
+  .contact-icon {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .contact-text h5 {
+    font-size: 0.9rem;
+  }
+
+  .contact-text p {
+    font-size: 0.8rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .contact-form h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Hero Section Mobile Improvements */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 100px;
+    padding-bottom: 2rem;
+  }
+
+  .hero-content .hero-name {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .hero-content .hero-title {
+    font-size: 1.8rem;
+    min-height: 2.5rem;
+  }
+
+  .hero-content .hero-description {
+    font-size: 1rem;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .hero-buttons .btn {
+    flex: 1;
+    min-width: calc(50% - 0.25rem);
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero-content .hero-title {
+    font-size: 1.5rem;
+    min-height: 2rem;
+  }
+
+  .hero-buttons .btn {
+    flex: 1;
+    min-width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+/* Navbar Mobile Improvements */
+@media (max-width: 992px) {
+  .custom-navbar {
+    padding: 0.75rem 0;
+  }
+
+  .navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .navbar-collapse {
+    margin-top: 1rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .custom-navbar .nav-link {
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+    border-radius: 4px;
+  }
+
+  .theme-toggle-btn {
+    margin: 0.5rem auto;
+    display: block;
+  }
+}
+
+/* Projects Section Mobile */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 3rem 0;
+  }
+
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-links {
+    margin-top: 0.5rem;
+    align-self: flex-end;
+  }
+
+  .technologies {
+    margin-top: 1rem;
+  }
+
+  .technologies .badge {
+    margin: 0.2rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Skills Section Mobile */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 3rem 0;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skill-category {
+    padding: 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+  }
+
+  .skill-item {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Education Section Mobile */
+@media (max-width: 768px) {
+  .education-section {
+    padding: 3rem 0;
+  }
+
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+
+  .timeline-item::after {
+    left: 13px;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-content .institution {
+    font-size: 0.9rem;
+  }
+}
+
+/* Live Chat Mobile */
+@media (max-width: 768px) {
+  .live-chat {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .chat-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+
+  .chat-window {
+    width: calc(100vw - 30px);
+    height: 400px;
+    right: -15px;
+  }
+
+  .chat-messages {
+    padding: 0.75rem;
+  }
+
+  .message {
+    max-width: 85%;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* General Mobile Typography */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 60px;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  h4 { font-size: 1.1rem; }
+  h5 { font-size: 1rem; }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Fix for overlapping elements */
+.contact-item {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-text {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Ensure proper spacing on all devices */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
